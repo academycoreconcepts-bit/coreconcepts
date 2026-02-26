@@ -335,7 +335,7 @@
           <li><a href="#">WhatsApp Us></a></li>
           <li><a href="#">Email Support></a></li>
           <li><a href="#">Privacy Policy></a></li>
-          <li><a href="#">Refund Policy> Please share your payment screenshot with our team via WhatsApp at [insert number]. Also, ensure that you have not attended classes for the past week. </a></li>
+          <li><a href="#">Refund Policy></a></li>
           <li><a href="#">FAQ</a></li>
         </ul>
       </div>
@@ -372,27 +372,27 @@
           <div class="form-row">
             <div class="form-group">
               <label>Full Name *</label>
-              <input type="text" id="fullName" placeholder="e.g. Muhammad Ali" required/>
+              <input type="text" id="fullName" name="fullName" placeholder="e.g. Muhammad Ali" required/>
             </div>
             <div class="form-group">
               <label>Father's Name *</label>
-              <input type="text" id="fatherName" placeholder="e.g. Muhammad Saleem" required/>
+              <input type="text" id="fatherName" name="fatherName" placeholder="e.g. Muhammad Saleem" required/>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Phone Number *</label>
-              <input type="tel" id="phone" placeholder="03XX-XXXXXXX" required/>
+              <input type="tel" id="phone" name="phone" placeholder="03XX-XXXXXXX" required/>
             </div>
             <div class="form-group">
               <label>Email Address</label>
-              <input type="email" id="email" placeholder="email@example.com"/>
+              <input type="email" id="email" name="email" placeholder="email@example.com"/>
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
               <label>Highest Education *</label>
-              <select id="education" required>
+              <select id="education" name="education" required>
                 <option value="">-- Select --</option>
                 <option>Matric (10th)</option>
                 <option>Intermediate (12th)</option>
@@ -402,7 +402,7 @@
             </div>
             <div class="form-group">
               <label>Current Status *</label>
-              <select id="status" required>
+              <select id="status" name="status" required>
                 <option value="">-- Select --</option>
                 <option>Student</option>
                 <option>Employed (Private)</option>
@@ -418,16 +418,16 @@
           <div class="form-row">
             <div class="form-group">
               <label>City *</label>
-              <input type="text" id="city" placeholder="e.g. Lahore" required/>
+              <input type="text" id="city" name="city" placeholder="e.g. Lahore" required/>
             </div>
             <div class="form-group">
               <label>Age</label>
-              <input type="number" id="age" placeholder="e.g. 22" min="10" max="70"/>
+              <input type="number" id="age" name="age" placeholder="e.g. 22" min="10" max="70"/>
             </div>
           </div>
           <div class="form-group full-width">
             <label>English Level (Self Assessment)</label>
-            <select id="currentLevel">
+            <select id="currentLevel" name="currentLevel">
               <option value="">-- Select your current level --</option>
               <option>Zero — Never studied English</option>
               <option>Beginner — Know alphabets only</option>
@@ -439,7 +439,7 @@
           </div>
           <div class="form-group full-width">
             <label>Why do you want to learn English?</label>
-            <textarea id="motivation" rows="3" placeholder="e.g. For job interviews, to study abroad, for better career..."></textarea>
+            <textarea id="motivation" name="motivation" rows="3" placeholder="e.g. For job interviews, to study abroad, for better career..."></textarea>
           </div>
           <button type="submit" class="btn-primary full-btn">Continue to Payment →</button>
         </form>
@@ -560,7 +560,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
