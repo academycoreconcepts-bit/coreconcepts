@@ -161,8 +161,11 @@ function goToPayment(e) {
   const formData = new FormData(form);
   fetch('https://formspree.io/f/meelnkvd', {
     method: 'POST',
-    body: formData,
-    headers: { 'Accept': 'application/json' }
+    body: JSON.stringify(Object.fromEntries(formData)),
+    headers: { 
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
   });
 
   // Go to step 2
@@ -307,3 +310,4 @@ function showAlert(message, type) {
   }
 
 }
+
