@@ -156,15 +156,14 @@ function goToPayment(e) {
   e.preventDefault();
 
   // Basic validation
-  const name = document.getElementById('fullName').value.trim();
-  const phone = document.getElementById('phone').value.trim();
-  const edu = document.getElementById('education').value;
-  const status = document.getElementById('status').value;
-
-  if (!name || !phone || !edu || !status) {
-    showAlert('Please fill all required fields marked with *', 'error');
-    return;
-  }
+  // FormSpree ko data bhejo
+  const form = document.getElementById('regForm');
+  const formData = new FormData(form);
+  fetch('https://formspree.io/f/meelnkvd', {
+    method: 'POST',
+    body: formData,
+    headers: { 'Accept': 'application/json' }
+  });
 
   // Go to step 2
   setStepDone(1);
@@ -306,4 +305,5 @@ function showAlert(message, type) {
     activeStep.insertBefore(alert, activeStep.querySelector('form') || activeStep.querySelector('.payment-methods') || activeStep.firstChild);
     setTimeout(() => alert.remove(), 4000);
   }
+
 }
